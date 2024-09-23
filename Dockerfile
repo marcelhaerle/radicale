@@ -1,5 +1,5 @@
-FROM python:3.9-alpine
-MAINTAINER "Marcel Härle <marcel.haerle@sonnvest.de>"
+FROM python:3.12-alpine
+LABEL org.opencontainers.image.authors="marcel.haerle@sonnvest.de"
 
 RUN apk \
     --update \
@@ -7,7 +7,7 @@ RUN apk \
     --virtual build-dependencies \
     add apache2-utils
 
-RUN python -m pip install radicale
+RUN python -m pip install radicale==3.2.3
 
 EXPOSE 5232
 
