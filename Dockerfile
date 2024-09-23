@@ -7,11 +7,11 @@ RUN apk \
     --virtual build-dependencies \
     add apache2-utils
 
-RUN python -m pip install radicale==3.2.3
+RUN python -m pip install bcrypt radicale==3.2.3
 
 EXPOSE 5232
 
-COPY start.sh /
+COPY start.sh /start.sh
 RUN chmod +x /start.sh
 
-CMD ["/start.sh"]
+CMD ["/bin/sh", "/start.sh"]
