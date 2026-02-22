@@ -7,7 +7,7 @@ RUN apk \
     --virtual build-dependencies \
     add apache2-utils
 
-RUN python -m pip install bcrypt radicale==3.2.3
+RUN python -m pip install bcrypt radicale==3.6.0
 
 EXPOSE 5232
 
