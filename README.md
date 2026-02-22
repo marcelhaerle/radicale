@@ -2,7 +2,7 @@
 
 ## Usage
 
-```
+```bash
 $ docker run \
     --name radicale \
     --restart unless-stopped \
@@ -13,7 +13,7 @@ $ docker run \
 
 ## Add User
 
-```
+```bash
 $ docker exec -it radicale /bin/sh
 / # htpasswd -B /var/radicale/users <user>
 ```
